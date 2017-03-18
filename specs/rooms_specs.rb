@@ -6,7 +6,16 @@ require_relative('../guests')
 class TestRooms < MiniTest::Test
   def setup
     song_list = []
-    guests = []
+    guests = [
+      { name: "Ken",
+        fav_song: "Wonderwall",
+        money: 500
+        },
+      { name: "Samson",
+        fav_song: "That's the way i like it",
+        money: 50
+        }
+      ]
     @room = Room.new("80s", 4, guests, 100, song_list)
   end
   
@@ -19,7 +28,7 @@ class TestRooms < MiniTest::Test
   end
 
   def test_room_guest_list
-    assert_equal(0, @room.guest_list.length)
+    assert_equal(2, @room.guest_list.length)
   end
 
   def test_room_cost
