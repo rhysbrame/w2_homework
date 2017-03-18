@@ -3,7 +3,6 @@ require('minitest/rg')
 require_relative('../guests')
 
 class TestGuests < MiniTest::Test
-
   def setup 
     @guests = Guest.new("Ken", "Wonderwall", 500)
   end
@@ -19,5 +18,4 @@ class TestGuests < MiniTest::Test
   def test_money
     assert_equal(500, @guests.money)
   end
-
 end
