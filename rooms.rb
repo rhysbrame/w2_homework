@@ -31,4 +31,8 @@ class Room
     @song_list << song
   end
 
+  def full_room
+    
+  end
+
 end

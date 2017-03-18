@@ -9,6 +9,8 @@ class TestRooms < MiniTest::Test
     @guest1 = Guest.new("Ken", "Wonderwall", 500)
     @guest2 = Guest.new("Samson", "That's the way i like it", 50)
     @guest3 = Guest.new("Rob", "Bohemian Rhapsody", 2500)
+    @guest4 = Guest.new("Al", "Gangsters Paradise", 1500)
+    @guest5 = Guest.new("Jake", "Where the streets have no name", 5)
     @song1 = Song.new("Sweet Child of Mine")
     @song2 = Song.new("Wonderwall")
     @song3 = Song.new("That's the way i like it")
@@ -64,6 +66,9 @@ class TestRooms < MiniTest::Test
     assert_equal(3,@room.song_list_count)
   end
 
+  def test_full_room()
+    
+  end
 
 end
 
